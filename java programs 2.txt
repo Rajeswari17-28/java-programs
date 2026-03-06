@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class DivisionWithException {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        try {
+
+            System.out.println("Enter numerator:");
+            int a = scan.nextInt();
+
+            System.out.println("Enter denominator:");
+            int b = scan.nextInt();
+
+            int result = a / b;
+
+            System.out.println("Result = " + result);
+
+        }
+
+        catch (ArithmeticException e) {
+
+            System.out.println("Error: Division by zero is not allowed.");
+            System.out.println("Exception Details: " + e);
+
+        }
+
+        catch (Exception e) {
+
+            System.out.println("Invalid input! Please enter only integers.");
+        }
+
+        finally {
+
+            System.out.println("Program executed successfully (Handled Safely).");
+        }
+
+        scan.close();
+    }
+}
