@@ -1,0 +1,28 @@
+class VariableTypes {
+
+    static String collegeName = "AVANTHI";
+
+    int age;
+
+    VariableTypes(int a) {
+        age = a;
+    }
+
+    void display() {
+        int marks = 85;
+
+        System.out.println("Age: " + age);
+        System.out.println("Marks: " + marks);
+        System.out.println("College: " + collegeName);
+    }
+
+    public static void main(String[] args) {
+
+        VariableTypes s1 = new VariableTypes(20);
+        VariableTypes s2 = new VariableTypes(22);
+
+        s1.display();
+        System.out.println("----");
+        s2.display();
+    }
+}
